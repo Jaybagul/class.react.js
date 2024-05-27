@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Gym Quates down</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <div class="main"><button id="start">Start quates</button>
-    <button id="stop" >End Quates</button></div>
-    <p id="slider">
-    </p>
+    <div class="container">
+        <div class="main">
+            <button id="start">Start quates</button>
+            <button id="stop">End Quates</button>
+        </div>
+        
+        <p id="slider">
+        </p>
 
-</div>
+    </div>
 
-<script>
-    let intervalId;
-    let start=document.getElementById("start")
-    let stop=document.getElementById("stop")
+    <script>
+        let intervalId;
+        let start = document.getElementById("start")
+        let stop = document.getElementById("stop")
 
-   let store= start.addEventListener("click",(e)=>{
-        let arr = [" “We are what we repeatedly do. Excellence then is not an act but a habit.”  ", " ““The body achieves what the mind believes.”” ", "“Dead last finish is greater than did not finish, which trumps did not start.”","“Take care of your body. It’s the only place you have to live.” "];
+        let store = start.addEventListener("click", (e) => {
+            let arr = [" “We are what we repeatedly do. Excellence then is not an act but a habit.”  ", " ““The body achieves what the mind believes.”” ", "“Dead last finish is greater than did not finish, which trumps did not start.”", "“Take care of your body. It’s the only place you have to live.” "];
 
-    let currentIndex = 0;
-    let slider = document.getElementById('slider');
+            let currentIndex = 0;
+            let slider = document.getElementById('slider');
 
-    function SliderInt() {
-        currentIndex++;
-        if (currentIndex >= arr.length) {
-            currentIndex = 0; 
-        }
-        slider.innerText= arr[currentIndex];
-    }
+            function SliderInt() {
+                currentIndex++;
+                if (currentIndex >= arr.length) {
+                    currentIndex = 0;
+                }
+                slider.innerText = arr[currentIndex];
+            }
 
-    intervalId =   setInterval( SliderInt, 3000);
-    })
+            intervalId = setInterval(SliderInt, 3000);
+        })
 
-    stop.addEventListener("click",()=>clearInterval(intervalId))
+        stop.addEventListener("click", () => clearInterval(intervalId))
 
-</script>
+    </script>
